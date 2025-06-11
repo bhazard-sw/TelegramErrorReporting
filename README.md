@@ -29,3 +29,36 @@ A lightweight Python utility that sends real-time error notifications to a Teleg
 
 ```bash
 pip install requests python-dotenv
+```
+
+---
+
+## Configuration
+
+Create a .env file in your project root and add your bot credentials:
+
+```
+TELEGRAM_BOT_TOKEN=123456789:ABCdefYourBotTokenHere
+TELEGRAM_CHANNEL_ID=@your_channel_username
+```
+
+---
+
+## Future Enhancements
+
+- Error Grouping
+  -  Reduce noise by grouping repeated errors with matching stack traces.
+- Rate Limiting
+  -  Prevent spamming by limiting how often the same error is reported.
+- Persistent Logging
+  -  Store error events in SQLite, PostgreSQL, or flat files.
+- Web Dashboard
+  -  Build a Flask or FastAPI frontend to browse, search, and manage error logs.
+- Multi-Channel Alerts
+  -  Expand support for Slack, Discord, SMS, or email notifications.
+- Authentication
+  -  Add API key protection for third-party error posting.
+- Context Replay
+  -  Log request/response pairs for easier bug reproduction.
+- CI/Git Metadata
+  -  Attach commit hashes, branch names, or deployment IDs to errors.
